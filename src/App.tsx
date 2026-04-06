@@ -6,6 +6,45 @@ import Modal from "./Modal";
 function App() {
   const mapRef = useRef<MapRef>(null);
   const [showMarker, setShowMarker] = useState(false);
+  const [showMioModal, setShowMioModal] = useState<boolean>(false);
+  const [showStelioModal, setShowStelioModal] = useState<boolean>(false);
+
+  const stelioImages = [
+    "home",
+    "property",
+    "booking property",
+    "bookings",
+    "messages",
+    "manage",
+  ];
+
+  const mioImages = [
+    "home",
+    "subject",
+    "activity 1",
+    "activity 2",
+    "activity 3",
+    "scoring",
+    "analytics",
+  ];
+  const stelioLanguages = [
+    "React",
+    "Typescript",
+    "Tailwind",
+    "Spring Boot",
+    "PostgreSQL",
+    "Digital Ocean",
+    "Cloudflare R2",
+  ];
+
+  const mioLanguages = [
+    "React Native",
+    "Typescript",
+    "Laravel",
+    "Firebase Realtime Database",
+    "Firebase Storage",
+    "Hostinger",
+  ];
 
   const targetLocation = {
     longitude: 121.0582,
@@ -62,7 +101,34 @@ function App() {
 
   return (
     <div>
-      <Modal />
+      {showMioModal && (
+        <Modal
+          onClose={() => setShowMioModal(false)}
+          details={{
+            title: "mío",
+            description:
+              "Mio is a web and mobile oralism-based Learning Management System that supports speech and auditory development for learners at the Philippine Institute for the Deaf.",
+            images: mioImages,
+            languages: mioLanguages,
+            type: "mio",
+          }}
+        />
+      )}
+      {showStelioModal && (
+        <Modal
+          onClose={() => setShowStelioModal(false)}
+          details={{
+            title: "Stelio - A Booking System",
+            description:
+              "Stelio is a backend system for a real-estate rental platform built with Spring Boot, focused on transactional safety, idempotency, and strong booking state management.",
+            images: stelioImages,
+            link: "https://stelio-frontend.aaronbaon1.workers.dev/",
+            languages: stelioLanguages,
+            type: "stelio",
+          }}
+        />
+      )}
+
       {/* NAV */}
       <nav className="nav">
         <a href="#" className="nav-logo">
@@ -82,7 +148,7 @@ function App() {
             Contact
           </a>
           <a
-            href="../public/cv.pdf"
+            href="/public/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-cta"
@@ -149,7 +215,7 @@ function App() {
           <div className="section-header">
             <h2 className="section-title">Work</h2>
             <a
-              href="../public/cv.pdf"
+              href="/public/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="section-link"
@@ -189,7 +255,6 @@ function App() {
         <hr className="divider" />
 
         {/* PROJECTS */}
-        {/* PROJECTS */}
         <section className="section" id="projects">
           <div className="section-header">
             <h2 className="section-title">Projects</h2>
@@ -200,7 +265,10 @@ function App() {
 
           <div className="proj-list">
             {/* Web project — browser frame */}
-            <button className="proj-spotlight">
+            <button
+              className="proj-spotlight"
+              onClick={() => setShowStelioModal(!showStelioModal)}
+            >
               <div className="frame-web">
                 <div className="frame-web-bar">
                   <span className="frame-dot"></span>
@@ -210,7 +278,7 @@ function App() {
                 </div>
                 <div className="frame-web-body">
                   <img
-                    src="../stelio.png"
+                    src="/stelio/home.png"
                     alt="runx preview"
                     className="frame-img"
                   />
@@ -253,8 +321,13 @@ function App() {
               </div>
             </button>
 
-            {/* Mobile project — phone frame */}
-            <button className="proj-spotlight">
+            {/* <Modal /> */}
+
+            {/* Mobile project */}
+            <button
+              className="proj-spotlight"
+              onClick={() => setShowMioModal(!showMioModal)}
+            >
               <div className="proj-info">
                 <div className="proj-num">02</div>
                 <h3 className="proj-name">
@@ -423,11 +496,7 @@ function App() {
           <span className="footer-copy">© 2026 Aaron Josh Baon</span>
           <div className="footer-links">
             <a href="#">Profile</a>
-            <a
-              href="../public/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/public/cv.pdf" target="_blank" rel="noopener noreferrer">
               CV
             </a>
             <a href="#">Projects</a>
