@@ -148,7 +148,7 @@ function App() {
             Contact
           </a>
           <a
-            href="/public/cv.pdf"
+            href="/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-cta"
@@ -215,7 +215,7 @@ function App() {
           <div className="section-header">
             <h2 className="section-title">Work</h2>
             <a
-              href="/public/cv.pdf"
+              href="/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="section-link"
@@ -496,7 +496,7 @@ function App() {
           <span className="footer-copy">© 2026 Aaron Josh Baon</span>
           <div className="footer-links">
             <a href="#">Profile</a>
-            <a href="/public/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
               CV
             </a>
             <a href="#">Projects</a>
