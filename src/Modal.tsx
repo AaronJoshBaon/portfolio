@@ -61,7 +61,7 @@ function Modal({
           <img
             key={current}
             data-dir={dir}
-            src={`/public/${type}/${images[current]}.png`}
+            src={`../public/${type}/${images[current]}.png`}
             alt={images[current]}
           />
 
