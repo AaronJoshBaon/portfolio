@@ -61,10 +61,9 @@ function Modal({
           <img
             key={current}
             data-dir={dir}
-            src={`../public/${type}/${images[current]}.png`}
+            src={`/${type}/${images[current]}.png`}
             alt={images[current]}
           />
-
           <div className="img-nav">
             <button
               className="nav-btn"
