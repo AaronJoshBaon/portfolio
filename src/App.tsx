@@ -314,9 +314,9 @@ function App() {
                   renters and property owners.
                 </p>
                 <div className="proj-tags">
-                  <span className="proj-tag">TypeScript</span>
-                  <span className="proj-tag">Node.js</span>
-                  <span className="proj-tag">npm</span>
+                  {stelioLanguages.map((lang) => (
+                    <span className="proj-tag">{lang}</span>
+                  ))}
                 </div>
               </div>
             </button>
@@ -344,9 +344,9 @@ function App() {
                   Speech Recognition for interactive speech training features.
                 </p>
                 <div className="proj-tags">
-                  <span className="proj-tag">React Native</span>
-                  <span className="proj-tag">Expo</span>
-                  <span className="proj-tag">TypeScript</span>
+                  {mioLanguages.map((lang) => (
+                    <span className="proj-tag">{lang}</span>
+                  ))}
                 </div>
               </div>
               <div className="frame-phone">
