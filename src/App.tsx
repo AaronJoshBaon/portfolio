@@ -233,6 +233,31 @@ function App() {
               <div className="work-content">
                 <div className="work-meta">
                   <span className="work-company">
+                    IBM Technologies Philippines Inc.
+                  </span>
+                </div>
+                <div className="work-role">Application Developer Associate Intern</div>
+                <div className="work-period">May 2026 – Aug 2026</div>
+                <p className="work-desc">
+                  Completed structured training in Java (Jakarta EE), Vue.js, and mobile application development 
+                  to build hands-on experience with modern full-stack frameworks. Collaborated with cross-functional 
+                  teams in an agile environment, gaining exposure to IBM's enterprise software development culture 
+                  and best practices. Contributed to a team project that leveraged Excel VBA macros to automate 
+                  Excel workflows, reducing manual data processing tasks and improving operational efficiency.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline">
+            <div className="work-entry">
+              <div className="timeline-col">
+                <div className="tl-dot current"></div>
+                <div className="tl-line"></div>
+              </div>
+              <div className="work-content">
+                <div className="work-meta">
+                  <span className="work-company">
                     Simplevia Technologies Inc.
                   </span>
                 </div>
@@ -417,7 +442,7 @@ function App() {
 
           <div className="connect-list">
             <a
-              href="https://github.com/shironzi"
+              href="https://github.com/AaronJoshBaon"
               className="connect-row"
               target="_blank"
               rel="noopener noreferrer"
@@ -435,7 +460,7 @@ function App() {
                 </span>
                 <div>
                   <div className="connect-platform">GitHub</div>
-                  <div className="connect-handle">@shironzi</div>
+                  <div className="connect-handle">@AaronJoshBaon</div>
                 </div>
               </div>
               <span className="connect-arrow">↗</span>
